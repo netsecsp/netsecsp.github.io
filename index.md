@@ -1,4 +1,4 @@
-## Asynframe framework v1.9.0  
+## Asynframe framework v2.0.0  
 > https://github.com/netsecsp/asynframe  
 
 # 项目背景 [english](/index_EN.md)   
@@ -68,9 +68,10 @@ asynframe framework解决上面所提的软件产品开发过程中的六大问�
 |python38/python312|插件|实现IOsComman接口执行python框架|\support\testpython\testpython<br>\support\testpython\testapi|
 
 # 变更记录
-2024/12/23 发布windows平台的asynframe framework v1.9.0  
-> 优化性能  
+2025/02/08 发布windows平台的asynframe framework v2.0.0  
+> 发布插件: edgeproxy  
 
+2024/12/23 发布windows平台的asynframe framework v1.9.0  
 2024/11/11 发布windows平台的asynframe framework v1.8.1  
 2024/08/16 发布windows平台的asynframe framework v1.7.1  
 2024/07/12 发布windows平台的asynframe framework v1.6.1  
@@ -82,8 +83,8 @@ asynframe framework解决上面所提的软件产品开发过程中的六大问�
 2022/05/05 发布windows平台的asynframe framework v1.0.0  
 
 # 编译环境
-> sdk_v1.9.0-Msvc2019_20241223.zip是通过Microsoft Visual Studio 2019编译的SDK  
-> sdk_v1.9.0-Msvc2013_20241223.zip是通过Microsoft Visual Studio 2013编译的SDK  
+> sdk_v2.0.0-Msvc2019_20250208.zip是通过Microsoft Visual Studio 2019编译的SDK  
+> sdk_v2.0.0-Msvc2013_20250208.zip是通过Microsoft Visual Studio 2013编译的SDK  
 
 1. 需在工程里设置asynframe相应的include/lib路径  
 2. 根据工程的运行库选择链接asynframe相应的asynsdk_mini-[MD/MDd/MT/MTd].lib  

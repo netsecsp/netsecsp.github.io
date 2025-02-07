@@ -29,20 +29,25 @@ LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
 NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 *****************************************************************************/
-import "IAsynNetwork.idl";
+import "IAsynFrame.idl";
 
     cpp_quote("#pragma pack(push, 1)")
 
     /////////////////////////////////////////////////////////////////////////////
-    [// 提供Proxy.SOCKET
+    [// 显示继承IAsynMessageEvents for mouse/key events, 隐含继承IOsCommand/IAsynMessageHolder for js
         object,
-        uuid(3FC5835E-8924-41ac-8631-131A4958B346),
-        helpstring("IAsynProxySocket Interface"),
+        uuid(5963DCD6-9DE7-4579-ADE7-C8635069F113),
+        helpstring("IChromeWebView Interface"),
         pointer_default(unique)
     ]
-    interface IAsynProxySocket : IAsynRawSocket
+    interface IChromeWebView : IAsynMessageEvents
     {
-        HRESULT SetProxyContext( [in ]STRING Host, [in ]PORT port, [in ]STRING Method, [in ]IKeyvalSetter* Param2 );
+        HRESULT GetViewSize( [out]uint32_t* w, [out]uint32_t* h ); 
+        HRESULT SetViewSize( [in ]uint32_t  w, [in ]uint32_t  h );
+
+        HRESULT RefreshPage( );
+
+        HRESULT SetFocus( [in ]BOOL focused );
     };
 
     cpp_quote("#pragma pack(pop)")
