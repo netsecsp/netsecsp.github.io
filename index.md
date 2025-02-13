@@ -1,4 +1,4 @@
-## Asynframe framework v2.0.0  
+## Asynframe framework v2.0.1  
 > https://github.com/netsecsp/asynframe  
 
 # 项目背景 [english](/index_EN.md)   
@@ -8,7 +8,7 @@
 3. 界面跟其他各个SDK模块（包括集成第三方开源项目）之间信息交互而产生问题--涉及线程同步，事件序列以及操作耗时过长等问题  
 4. 各个模块（包括界面）通过创建工作线程去解决耗时/同步操作等问题--涉及资源优化  
 5. 使用同步锁--存在死锁问题  
-6. 模块业务逻辑复杂导致频繁发布补丁包   
+6. 模块业务逻辑复杂导致频繁发布补丁包  
 
 # 项目介绍  
 > [windows]基于消息驱动的SDK开发框架，提供日志、线程、管道、文件和网络等基础接口。  
@@ -43,13 +43,13 @@ asynframe framework解决上面所提的软件产品开发过程中的六大问�
 7. 支持内嵌lua, jvm和python虚拟机的开发框架  
 **lua:**   
 a. 内置IUnknown类, 提供castOf/release接口  
-b. sysargv.get/set/save接口提供存取app相应配置项  
+b. appconf.get/set/save接口提供存取app相应配置项  
 c. log.v/d/i/w/e/write 接口提供打印日志  
 d. sys.create/invoke提供创建c对象/指定线程调用c函数  
 e. IScriptHost.invoke提供调用lua函数, IOsCommand.Execute提供执行lua  
 **python:**  
 a. 内置sys.IUnknown类  
-b. sysargv.get/set/save接口提供存取app相应配置项  
+b. appconf.get/set/save接口提供存取app相应配置项  
 c. log.v/d/i/w/e/write 接口提供打印日志  
 d. sys.create/invoke提供创建c对象/指定线程调用c函数  
 e. IScriptHost.invoke提供调用python函数，IOsCommand.Execute提供执行python  
@@ -89,8 +89,9 @@ e. IScriptHost.invoke提供调用java函数，IOsCommand.Execute提供执行java
 |edgeproxy|插件[asyncore]|封装ICoreWebView2|\support\testedgeproxy|
 
 # 变更记录
-2025/02/08 发布windows平台的asynframe framework v2.0.0  
+2025/02/13 发布windows平台的asynframe framework v2.0.1  
 > 发布插件: edgeproxy  
+> 支持动态加载log4cplus
 
 2024/12/23 发布windows平台的asynframe framework v1.9.0  
 2024/11/11 发布windows平台的asynframe framework v1.8.1  
@@ -104,8 +105,8 @@ e. IScriptHost.invoke提供调用java函数，IOsCommand.Execute提供执行java
 2022/05/05 发布windows平台的asynframe framework v1.0.0  
 
 # 编译环境
-> sdk_v2.0.0-Msvc2019_20250208.zip是通过Microsoft Visual Studio 2019编译的SDK  
-> sdk_v2.0.0-Msvc2013_20250208.zip是通过Microsoft Visual Studio 2013编译的SDK  
+> sdk_v2.0.1-Msvc2019_20250213.zip是通过Microsoft Visual Studio 2019编译的SDK  
+> sdk_v2.0.1-Msvc2013_20250213.zip是通过Microsoft Visual Studio 2013编译的SDK  
 
 1. 需在工程里设置asynframe相应的include/lib路径  
 2. 根据工程的运行库选择链接asynframe相应的asynsdk_mini-[MD/MDd/MT/MTd].lib  
